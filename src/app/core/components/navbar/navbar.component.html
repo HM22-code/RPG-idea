@@ -7,7 +7,7 @@
 	>
 		<mat-icon>menu</mat-icon>
 	</button>
-	<span>My App</span>
+	<span>My TODO App</span>
 	<span class="spacer"></span>
 	<button
 		mat-icon-button
@@ -34,7 +34,13 @@
 	</button>
 </mat-toolbar>
 <mat-drawer-container class="container">
-	<mat-drawer #drawer mode="side" opened> Drawer content </mat-drawer>
+	<mat-drawer #drawer mode="side" opened>
+		<mat-nav-list>
+			<mat-list-item> List item 1 </mat-list-item>
+			<mat-list-item> List item 2 </mat-list-item>
+			<mat-list-item> List item 3 </mat-list-item>
+		</mat-nav-list>
+	</mat-drawer>
 	<mat-drawer-content #content>
 		<div>
 			<router-outlet></router-outlet>

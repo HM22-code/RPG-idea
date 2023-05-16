@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatListModule } from '@angular/material/list';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
@@ -33,6 +34,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 		MatButtonModule,
 		MatIconModule,
 		MatBadgeModule,
+		MatListModule,
 		DragDropModule
 	],
 	providers: [],
