@@ -7,14 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { KanbanBoardComponent } from './core/components/kanban-board/kanban-board.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
+
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
-	declarations: [AppComponent, NavbarComponent, FooterComponent],
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		FooterComponent,
+		KanbanBoardComponent
+	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -22,7 +31,9 @@ import { MatIconModule } from '@angular/material/icon';
 		MatToolbarModule,
 		MatSidenavModule,
 		MatButtonModule,
-		MatIconModule
+		MatIconModule,
+		MatBadgeModule,
+		DragDropModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
