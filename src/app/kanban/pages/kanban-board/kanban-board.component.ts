@@ -11,7 +11,13 @@ import { Component } from '@angular/core';
 	styleUrls: ['./kanban-board.component.scss']
 })
 export class KanbanBoardComponent {
-	todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+	todo = [
+		'Get to work',
+		'Pick up groceries',
+		'Go home',
+		'Fall asleep',
+		'Wake up'
+	];
 	done = [
 		'Get up',
 		'Brush teeth',
@@ -19,7 +25,13 @@ export class KanbanBoardComponent {
 		'Check e-mail',
 		'Walk dog'
 	];
-	progress = ['A', 'B', 'C', 'D', 'E'];
+	progress = [
+		'Abort code',
+		'Block user',
+		'Code theme',
+		'Delete data',
+		'Update code'
+	];
 
 	drop(event: CdkDragDrop<string[]>) {
 		if (event.previousContainer === event.container) {
