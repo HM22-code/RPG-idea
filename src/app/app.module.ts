@@ -20,6 +20,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ThemeSwitcherComponent } from './core/components/theme-switcher/theme-switcher.component';
 import { KanbanStatsComponent } from './kanban/pages/kanban-stats/kanban-stats.component';
+import { TaskDialogComponent } from './kanban/components/task-dialog/task-dialog.component';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,8 @@ import { KanbanStatsComponent } from './kanban/pages/kanban-stats/kanban-stats.c
 		FooterComponent,
 		KanbanBoardComponent,
 		ThemeSwitcherComponent,
-		KanbanStatsComponent
+		KanbanStatsComponent,
+		TaskDialogComponent
 	],
 	imports: [
 		BrowserModule,
