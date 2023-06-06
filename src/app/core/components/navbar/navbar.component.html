@@ -36,9 +36,8 @@
 <mat-drawer-container class="container">
 	<mat-drawer #drawer mode="side" opened>
 		<mat-nav-list>
-			<mat-list-item> List item 1 </mat-list-item>
-			<mat-list-item> List item 2 </mat-list-item>
-			<mat-list-item> List item 3 </mat-list-item>
+			<a mat-list-item routerLink="/app-kanban-board">Kanban Board</a>
+			<a mat-list-item routerLink="/app-kanban-stats">Kanban Stats</a>
 		</mat-nav-list>
 	</mat-drawer>
 	<mat-drawer-content #content>
