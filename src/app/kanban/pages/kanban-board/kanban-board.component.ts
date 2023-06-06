@@ -19,6 +19,7 @@ export class KanbanBoardComponent {
 		'Check e-mail',
 		'Walk dog'
 	];
+	progress = ['A', 'B', 'C', 'D', 'E'];
 
 	drop(event: CdkDragDrop<string[]>) {
 		if (event.previousContainer === event.container) {
