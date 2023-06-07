@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
@@ -66,6 +67,8 @@ import { TaskDialogComponent } from './kanban/components/task-dialog/task-dialog
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
+		FormsModule,
+		ReactiveFormsModule,
 		MatToolbarModule,
 		MatSidenavModule,
 		MatButtonModule,

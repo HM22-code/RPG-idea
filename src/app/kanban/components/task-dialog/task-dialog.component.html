@@ -1,1 +1,30 @@
-<p>task-dialog works!</p>
+<h1 mat-dialog-title>Create a new task</h1>
+<div mat-dialog-content class="content">
+	<form [formGroup]="form" class="form">
+		<mat-form-field appearance="fill" class="form-control">
+			<mat-label>Title</mat-label>
+			<input matInput formControlName="title" />
+		</mat-form-field>
+		<mat-form-field appearance="outline">
+			<mat-label>Description</mat-label>
+			<textarea
+				matInput
+				formControlName="description"
+				class="form-control"
+			>
+			</textarea>
+		</mat-form-field>
+	</form>
+</div>
+<div mat-dialog-actions class="buttons">
+	<button mat-button color="accent" (click)="onNoClick()">No Thanks</button>
+	<button
+		mat-raised-button
+		color="primary"
+		[mat-dialog-close]="data"
+		(click)="onSubmitClick(form.value)"
+		[disabled]="!form.valid"
+	>
+		Ok
+	</button>
+</div>

@@ -1,7 +1,11 @@
 <div class="board">
 	<div class="example-container">
-		<h2>To do</h2>
-
+		<div class="title-container">
+			<h2>To do</h2>
+			<button mat-mini-fab color="accent" (click)="openDialog(todo)">
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#todoList="cdkDropList"
@@ -17,8 +21,12 @@
 	</div>
 
 	<div class="example-container">
-		<h2>In Progress</h2>
-
+		<div class="title-container">
+			<h2>In Progress</h2>
+			<button mat-mini-fab color="accent" (click)="openDialog(progress)">
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#progressList="cdkDropList"
@@ -34,8 +42,12 @@
 	</div>
 
 	<div class="example-container">
-		<h2>Done</h2>
-
+		<div class="title-container">
+			<h2>Done</h2>
+			<button mat-mini-fab color="accent" (click)="openDialog(done)">
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#doneList="cdkDropList"
