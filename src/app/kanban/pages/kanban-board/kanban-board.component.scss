@@ -45,6 +45,13 @@
 	font-size: 14px;
 }
 
+.button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .cdk-drag-preview {
 	box-sizing: border-box;
 	border-radius: 4px;
