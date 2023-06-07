@@ -60,7 +60,23 @@
 			(cdkDropListDropped)="drop($event)"
 		>
 			<div class="example-box" *ngFor="let item of progress" cdkDrag>
-				{{ item }}
+				<span>{{ item }}</span>
+				<div class="button-container">
+					<button
+						mat-icon-button
+						aria-label="Edit icon button"
+						(click)="openEditDialog(todo, item)"
+					>
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(todo, item)"
+					>
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -85,7 +101,23 @@
 			(cdkDropListDropped)="drop($event)"
 		>
 			<div class="example-box" *ngFor="let item of done" cdkDrag>
-				{{ item }}
+				<span>{{ item }}</span>
+				<div class="button-container">
+					<button
+						mat-icon-button
+						aria-label="Edit icon button"
+						(click)="openEditDialog(todo, item)"
+					>
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(todo, item)"
+					>
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
