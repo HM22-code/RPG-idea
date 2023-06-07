@@ -1,4 +1,17 @@
 .chart-container {
-	height: 300px;
-	width: 300px;
+	width: 100%;
+	height: 100%;
+}
+.chart-card {
+	height: 90%;
+	width: 90%;
+	padding: 10px;
+}
+#doughnutChart {
+	height: 100%;
+	width: 100%;
+}
+#barChart {
+	height: 100%;
+	width: 100%;
 }

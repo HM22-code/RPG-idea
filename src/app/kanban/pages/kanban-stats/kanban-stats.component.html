@@ -1,9 +1,12 @@
-<mat-grid-list cols="2">
-	<mat-grid-tile>
-		<mat-card>
-			<canvas id="myChart">{{ chart }}</canvas>
+<mat-grid-list cols="2" class="chart-container">
+	<mat-grid-tile class="chart-tile">
+		<mat-card class="chart-card">
+			<canvas id="doughnutChart">{{ doughnutChart }}</canvas>
 		</mat-card>
 	</mat-grid-tile>
-	<mat-grid-tile>2</mat-grid-tile>
-	<mat-grid-tile>3</mat-grid-tile>
+	<mat-grid-tile class="chart-tile">
+		<mat-card class="chart-card">
+			<canvas id="barChart">{{ barChart }}</canvas>
+		</mat-card>
+	</mat-grid-tile>
 </mat-grid-list>
