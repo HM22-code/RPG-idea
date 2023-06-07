@@ -52,6 +52,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ThemeSwitcherComponent } from './core/components/theme-switcher/theme-switcher.component';
 import { KanbanStatsComponent } from './kanban/pages/kanban-stats/kanban-stats.component';
 import { TaskDialogComponent } from './kanban/components/task-dialog/task-dialog.component';
+import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
 	declarations: [
@@ -61,7 +62,8 @@ import { TaskDialogComponent } from './kanban/components/task-dialog/task-dialog
 		KanbanBoardComponent,
 		ThemeSwitcherComponent,
 		KanbanStatsComponent,
-		TaskDialogComponent
+		TaskDialogComponent,
+		ConfirmDialogComponent
 	],
 	imports: [
 		BrowserModule,

@@ -28,7 +28,11 @@
 					>
 						<mat-icon>edit</mat-icon>
 					</button>
-					<button mat-icon-button aria-label="Delete icon button">
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(todo, item)"
+					>
 						<mat-icon>delete</mat-icon>
 					</button>
 				</div>

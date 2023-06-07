@@ -99,4 +99,23 @@ export class KanbanBoardComponent {
 			}
 		});
 	}
+
+	openDeleteDialog(column: string[], item: any): void {
+		const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+			width: '300px',
+			height: '150px'
+		});
+
+		dialogRef.backdropClick().subscribe(() => {
+			dialogRef.close({
+				submit: false
+			});
+		});
+
+		dialogRef.afterClosed().subscribe((result) => {
+			if (result.submit == true) {
+				column.splice(column.indexOf(item), 1);
+			}
+		});
+	}
 }
