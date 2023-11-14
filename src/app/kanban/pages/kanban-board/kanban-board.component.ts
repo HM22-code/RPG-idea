@@ -4,6 +4,14 @@ import {
 	transferArrayItem
 } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskDialogComponent } from '../../components/task-dialog/task-dialog.component';
+import { ConfirmDialogComponent } from 'src/app/shared/components/confirm-dialog/confirm-dialog.component';
+
+export interface DialogData {
+	title: string;
+	description: string;
+}
 
 @Component({
 	selector: 'app-kanban-board',
@@ -33,6 +41,8 @@ export class KanbanBoardComponent {
 		'Update code'
 	];
 
+	constructor(public dialog: MatDialog) {}
+
 	drop(event: CdkDragDrop<string[]>) {
 		if (event.previousContainer === event.container) {
 			moveItemInArray(
@@ -48,5 +58,64 @@ export class KanbanBoardComponent {
 				event.currentIndex
 			);
 		}
+	}
+
+	openCreateDialog(column: string[]): void {
+		const dialogRef = this.dialog.open(TaskDialogComponent, {
+			width: '350px',
+			height: '400px',
+			data: { title: '', description: '' }
+		});
+
+		dialogRef.backdropClick().subscribe(() => {
+			dialogRef.close({
+				submit: false
+			});
+		});
+
+		dialogRef.afterClosed().subscribe((result) => {
+			if (result.submit == true) {
+				column.push(result.form.title);
+			}
+		});
+	}
+
+	openEditDialog(column: string[], item: any): void {
+		const dialogRef = this.dialog.open(TaskDialogComponent, {
+			width: '350px',
+			height: '400px',
+			data: { title: item, description: '' }
+		});
+
+		dialogRef.backdropClick().subscribe(() => {
+			dialogRef.close({
+				submit: false
+			});
+		});
+
+		dialogRef.afterClosed().subscribe((result) => {
+			if (result.submit == true) {
+				column[column.indexOf(item)] = result.form.title;
+			}
+		});
+	}
+
+	openDeleteDialog(column: string[], item: any): void {
+		const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+			width: '300px',
+			height: '150px'
+		});
+
+		dialogRef.backdropClick().subscribe(() => {
+			dialogRef.close({
+				submit: false
+			});
+		});
+
+		dialogRef.afterClosed().subscribe((result) => {
+			if (result.submit == true) {
+				column.splice(column.indexOf(item), 1);
+			}
+		});
 	}
 }

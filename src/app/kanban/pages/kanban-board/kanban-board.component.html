@@ -1,7 +1,15 @@
 <div class="board">
 	<div class="example-container">
-		<h2>To do</h2>
-
+		<div class="title-container">
+			<h2>To do</h2>
+			<button
+				mat-mini-fab
+				color="accent"
+				(click)="openCreateDialog(todo)"
+			>
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#todoList="cdkDropList"
@@ -11,14 +19,38 @@
 			(cdkDropListDropped)="drop($event)"
 		>
 			<div class="example-box" *ngFor="let item of todo" cdkDrag>
-				{{ item }}
+				<span>{{ item }}</span>
+				<div class="button-container">
+					<button
+						mat-icon-button
+						aria-label="Edit icon button"
+						(click)="openEditDialog(todo, item)"
+					>
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(todo, item)"
+					>
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="example-container">
-		<h2>In Progress</h2>
-
+		<div class="title-container">
+			<h2>In Progress</h2>
+			<button
+				mat-mini-fab
+				color="accent"
+				(click)="openCreateDialog(progress)"
+			>
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#progressList="cdkDropList"
@@ -28,14 +60,38 @@
 			(cdkDropListDropped)="drop($event)"
 		>
 			<div class="example-box" *ngFor="let item of progress" cdkDrag>
-				{{ item }}
+				<span>{{ item }}</span>
+				<div class="button-container">
+					<button
+						mat-icon-button
+						aria-label="Edit icon button"
+						(click)="openEditDialog(progress, item)"
+					>
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(progress, item)"
+					>
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="example-container">
-		<h2>Done</h2>
-
+		<div class="title-container">
+			<h2>Done</h2>
+			<button
+				mat-mini-fab
+				color="accent"
+				(click)="openCreateDialog(done)"
+			>
+				<mat-icon>add</mat-icon>
+			</button>
+		</div>
 		<div
 			cdkDropList
 			#doneList="cdkDropList"
@@ -45,7 +101,23 @@
 			(cdkDropListDropped)="drop($event)"
 		>
 			<div class="example-box" *ngFor="let item of done" cdkDrag>
-				{{ item }}
+				<span>{{ item }}</span>
+				<div class="button-container">
+					<button
+						mat-icon-button
+						aria-label="Edit icon button"
+						(click)="openEditDialog(done, item)"
+					>
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button
+						mat-icon-button
+						aria-label="Delete icon button"
+						(click)="openDeleteDialog(done, item)"
+					>
+						<mat-icon>delete</mat-icon>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

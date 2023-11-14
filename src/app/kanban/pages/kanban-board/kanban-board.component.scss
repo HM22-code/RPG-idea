@@ -15,6 +15,12 @@
 	display: inline-block;
 	vertical-align: top;
 }
+.title-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
 
 .example-list {
 	border: solid 1px #ccc;
@@ -37,6 +43,13 @@
 	cursor: move;
 	background: white;
 	font-size: 14px;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .cdk-drag-preview {

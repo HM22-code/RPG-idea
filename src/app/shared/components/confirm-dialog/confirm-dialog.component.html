@@ -1,1 +1,7 @@
-<p>confirm-dialog works!</p>
+<h1 mat-dialog-title class="title">Confirm Action ?</h1>
+<div mat-dialog-actions class="buttons">
+	<button mat-button color="accent" (click)="onNoClick()">No Thanks</button>
+	<button mat-raised-button color="primary" (click)="onSubmitClick()">
+		Ok
+	</button>
+</div>
