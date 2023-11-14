@@ -14,7 +14,21 @@ $default-theme: mat.define-light-theme(
 	)
 );
 
+$dark-theme: mat.define-dark-theme(
+    (
+		color: (
+			primary: $primary,
+			accent: $accent,
+			warn: $warn
+		)
+	)
+);
+
 @include mat.all-component-themes($default-theme);
+
+.dark-theme {
+    @include mat.all-component-themes($dark-theme);
+}
 
 html,
 body {

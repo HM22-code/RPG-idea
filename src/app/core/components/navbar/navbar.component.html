@@ -9,6 +9,14 @@
 	</button>
 	<span>My TODO App</span>
 	<span class="spacer"></span>
+    <mat-slide-toggle
+        color="primary"
+        [checked]="isDarkTheme | async"
+        (change)="toggleDarkTheme($event.checked)"
+        class="dark-theme-toggle"
+    >
+        Dark Mode
+    </mat-slide-toggle>
 	<button
 		mat-icon-button
 		class="icon"
