@@ -15,16 +15,21 @@
         (change)="toggleDarkTheme($event.checked)"
         class="dark-theme-toggle"
     >
-        Dark Mode
+        <button
+            mat-icon-button
+            class="icon"
+            aria-label="icon-button with share icon"
+        >
+            <mat-icon *ngIf="darkmode" fontIcon="dark_mode"></mat-icon>
+            <mat-icon *ngIf="!darkmode" fontIcon="light_mode"></mat-icon>
+        </button>
     </mat-slide-toggle>
 	<button
 		mat-icon-button
 		class="icon"
 		aria-label="icon-button with settings icon"
 	>
-		<mat-icon matBadge="2" matBadgePosition="after" matBadgeColor="accent"
-			>notifications</mat-icon
-		>
+		<mat-icon matBadge="2" matBadgePosition="after" matBadgeColor="accent" fontIcon="notifications"></mat-icon>
 	</button>
 	<button
 		mat-icon-button

@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class NavbarComponent {
 
     isDarkTheme!: Observable<boolean>;
+    darkmode!: boolean;
 
     constructor(
         private themeService: ThemeService
@@ -21,7 +22,7 @@ export class NavbarComponent {
 
     toggleDarkTheme(checked: boolean) {
         this.themeService.setDarkTheme(checked);
-
+        this.darkmode = checked;
     }
 
 }
